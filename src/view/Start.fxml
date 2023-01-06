@@ -1,0 +1,1078 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ManagementController">
+    <children>
+        <AnchorPane prefHeight="583.0" prefWidth="890.0">
+         
+            <AnchorPane layoutX="-10.0" layoutY="-16.0" prefHeight="629.0" prefWidth="1081.0">
+                <children>
+                    <Pane fx:id="paneVerCiudades" prefHeight="602.0" prefWidth="890.0" style="-fx-background-color: #EBEFEB;" AnchorPane.bottomAnchor="-19.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <children>
+                            <Label layoutX="64.0" layoutY="69.0" prefHeight="41.0" prefWidth="144.0" text="Filtrar por ID">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <TextField fx:id="txtFiltroTLBC" layoutX="910.0" layoutY="76.0" onKeyReleased="#doLimitBusqC" prefHeight="25.0" prefWidth="78.0" />
+                            <TableView fx:id="tblVerCiudad" layoutX="30.0" layoutY="124.0" prefHeight="467.0" prefWidth="1024.0">
+                                <columns>
+                                    <TableColumn fx:id="colIdC" prefWidth="62.0" text="ID" />
+                                    <TableColumn fx:id="colNameC" prefWidth="221.11112213134766" text="Nombre" />
+                                    <TableColumn fx:id="colCountryCodC" prefWidth="141.55557250976562" text="Código de país" />
+                                    <TableColumn fx:id="colDistrictC" prefWidth="332.0" text="Distrito" />
+                                    <TableColumn fx:id="colPopulationC" prefWidth="263.0" text="Población" />
+                                </columns>
+                            </TableView>
+                            <Label layoutX="339.0" layoutY="74.0" prefHeight="31.0" prefWidth="236.0" text="Filtrar por nombre de la ciudad">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <TextField fx:id="txtFiltroTNC" layoutX="581.0" layoutY="76.0" onKeyReleased="#doBuscNomC" prefHeight="25.0" prefWidth="78.0" />
+                            <Label layoutX="755.0" layoutY="81.0" text="Limitar búsqueda">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <TextField fx:id="txtFiltroTCC" layoutX="181.0" layoutY="78.0" onKeyReleased="#doBuscCodC" prefHeight="25.0" prefWidth="78.0" />
+                        </children>
+                    </Pane>
+                    <Pane fx:id="paneVerPais" layoutX="1.0" layoutY="34.0" prefHeight="640.0" prefWidth="1020.0" style="-fx-background-color: #EBEFEB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-80.0" AnchorPane.topAnchor="0.0">
+                        <children>
+                            <TableView fx:id="tblVerPais" layoutX="30.0" layoutY="125.0" prefHeight="476.0" prefWidth="1071.0">
+                                <columns>
+                                    <TableColumn fx:id="colCodP" prefWidth="31.333330154418945" text="Cod" />
+                                    <TableColumn fx:id="colNameP" prefWidth="52.88886642456055" text="Nombre" />
+                                    <TableColumn fx:id="colContiP" prefWidth="46.0" text="Continente" />
+                                    <TableColumn fx:id="colRegionP" prefWidth="48.88887023925781" text="Región" />
+                                    <TableColumn fx:id="colSurfAP" minWidth="2.666748046875" prefWidth="54.0" text="Área de superficie" />
+                                    <TableColumn fx:id="colIndYP" prefWidth="48.0" text="Año de indep" />
+                                    <TableColumn fx:id="colPopulationP" prefWidth="67.0" text="Población" />
+                                    <TableColumn fx:id="colLifeEP" prefWidth="91.0" text="Esperanza de vida" />
+                                    <TableColumn fx:id="colGNPP" minWidth="0.0" prefWidth="50.0" text="PIB" />
+                                    <TableColumn fx:id="colGNPOP" prefWidth="81.0" text="PIBOld" />
+                                    <TableColumn fx:id="colLocalNP" minWidth="0.0" prefWidth="106.0" text="Nombre local" />
+                                    <TableColumn fx:id="colGovFormP" prefWidth="120.0" text="Forma de gobierno" />
+                                    <TableColumn fx:id="colHeadOSP" prefWidth="120.0" text="Cabeza de estado" />
+                                    <TableColumn fx:id="colCapitalP" minWidth="0.0" prefWidth="81.0" text="Capital" />
+                                    <TableColumn fx:id="colCod2P" prefWidth="72.0" text="Cod2" />
+                                </columns>
+                            </TableView>
+                            <Label layoutX="869.0" layoutY="79.0" text="Limitar búsqueda">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <TextField fx:id="txtFiltroTLBP" layoutX="1002.0" layoutY="77.0" onKeyReleased="#doLimitBusqP" prefHeight="25.0" prefWidth="78.0" />
+                            <Label layoutX="459.0" layoutY="81.0" text="Filtrar por nombre del país">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <TextField fx:id="txtFiltroTNP" layoutX="652.0" layoutY="77.0" onKeyReleased="#doBuscNomP" prefHeight="25.0" prefWidth="78.0" />
+                            <Label layoutX="64.0" layoutY="80.0" text="Filtrar por código">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <TextField fx:id="txtFiltroTCP" layoutX="200.0" layoutY="76.0" onKeyReleased="#doBuscCodP" prefHeight="25.0" prefWidth="78.0" />
+                        </children>
+                    </Pane>
+                    <Pane fx:id="paneVerLenguajes" layoutX="77.0" layoutY="34.0" prefHeight="640.0" prefWidth="1099.0" style="-fx-background-color: #EBEFEB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-18.0" AnchorPane.topAnchor="0.0">
+                        <children>
+                            <Label layoutX="630.0" layoutY="79.0" text="Limitar búsqueda">
+                                <font>
+                                    <Font size="12.0" />
+                                </font>
+                            </Label>
+                            <TextField fx:id="txtFiltroTLBL" layoutX="747.0" layoutY="76.0" onKeyReleased="#doLimitBusqL" prefHeight="25.0" prefWidth="78.0" />
+                            <Label layoutX="323.0" layoutY="78.0" text="Filtrar por nombre de leguaje">
+                                <font>
+                                    <Font size="11.0" />
+                                </font>
+                            </Label>
+                            <TextField fx:id="txtFiltroTCL" layoutX="201.0" layoutY="77.0" onKeyReleased="#doBuscCodL" prefHeight="25.0" prefWidth="78.0" />
+                            <Label layoutX="65.0" layoutY="80.0" prefHeight="23.0" prefWidth="117.0" text="Filtrar por código">
+                                <font>
+                                    <Font size="11.0" />
+                                </font>
+                            </Label>
+                            <TextField fx:id="txtFiltroTNL" layoutX="513.0" layoutY="77.0" onKeyReleased="#doBuscNomL" prefHeight="25.0" prefWidth="78.0" />
+                            <TableView fx:id="tblVerLenguajes" layoutX="32.0" layoutY="122.0" prefHeight="490.0" prefWidth="1018.0">
+                                <columns>
+                                    <TableColumn fx:id="colCountryCodLA" prefWidth="121.0" text="Codigo Pais" />
+                                    <TableColumn fx:id="collanguageLA" prefWidth="218.0" text="Idioma" />
+                                    <TableColumn fx:id="colisOffLA" prefWidth="211.0" text="Oficial" />
+                                    <TableColumn fx:id="colPercentageLA" prefWidth="294.0" text="Porcentaje" />
+                                </columns>
+                            </TableView>
+                        </children>
+                    </Pane>
+                    <Pane fx:id="paneCrearC" layoutX="10.0" layoutY="10.0" prefHeight="619.3333333333334" prefWidth="920.0" style="-fx-background-color: #EBEFEB;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <children>
+                            <Pane layoutX="31.0" layoutY="96.0" prefHeight="387.0" prefWidth="837.0">
+                                <children>
+                                    <Label layoutX="62.0" layoutY="71.0" prefHeight="28.0" prefWidth="109.0" text="ID">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="txtCreaIDC" layoutX="164.0" layoutY="75.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="138.0" />
+                                    <Label layoutX="61.0" layoutY="182.0" prefHeight="20.0" prefWidth="110.0" text="Nombre">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="409.0" layoutY="119.0" prefHeight="20.0" prefWidth="142.0" text="Estado/Departamento">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="408.0" layoutY="213.0" prefHeight="28.0" prefWidth="81.0" text="Población">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="61.0" layoutY="265.0" prefHeight="28.0" prefWidth="87.0" text="Código País">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="txtCreaNombreC" layoutX="168.0" layoutY="179.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="142.0" />
+                                    <TextField fx:id="txtCiudadCodP" layoutX="168.0" layoutY="267.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="142.0" />
+                                    <TextField fx:id="txtCreaDistrictC" layoutX="561.0" layoutY="115.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="138.0" />
+                                    <TextField fx:id="txtCreaPobC" layoutX="559.0" layoutY="213.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="138.0" />
+                                </children>
+                            </Pane>
+                            <Label layoutX="418.0" layoutY="75.0" style="-fx-text-fill: #6365a6; -fx-font-weight: 800;" text="NUEVA CIUDAD">
+                                <font>
+                                    <Font size="16.0" />
+                                </font>
+                            </Label>
+                            <Button fx:id="btnCrearC" layoutX="339.0" layoutY="466.0" mnemonicParsing="false" onAction="#doCrearC" prefHeight="43.0" prefWidth="276.0" style="-fx-background-color: linear-gradient(to left,#9CBCDA,#9c9dda); -fx-font-weight: 700; -fx-text-fill: white; -fx-background-radius: 30;" text="CREAR ENTRADA" />
+                        </children>
+                    </Pane>
+                    <Pane fx:id="paneCrearL" layoutX="20.0" layoutY="20.0" prefHeight="629.3333333333334" prefWidth="930.0" style="-fx-background-color: #EBEFEB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <children>
+                            <Pane layoutX="31.0" layoutY="96.0" prefHeight="387.0" prefWidth="837.0">
+                                <children>
+                                    <Label layoutX="227.0" layoutY="50.0" prefHeight="28.0" prefWidth="77.0" text="Código País" textAlignment="CENTER">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="txtCodePL" layoutX="203.0" layoutY="78.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="119.0" />
+                                    <Label layoutX="237.0" layoutY="170.0" prefHeight="20.0" prefWidth="59.0" text="Oficial">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="520.0" layoutY="54.0" prefHeight="20.0" prefWidth="65.0" text="Lenguaje">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="518.0" layoutY="166.0" prefHeight="28.0" prefWidth="71.0" text="Porcentaje">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="txtCreaL" layoutX="487.0" layoutY="77.0" onKeyReleased="#doFiilTextINV" prefHeight="23.0" prefWidth="119.0" />
+                                    <TextField fx:id="txtCreaPorL" layoutX="501.0" layoutY="210.0" onKeyReleased="#doFiilTextINV" prefHeight="23.0" prefWidth="119.0" />
+                                    <Button fx:id="btnCrearL" layoutX="279.0" layoutY="325.0" mnemonicParsing="false" onAction="#doCrearL" prefHeight="43.0" prefWidth="276.0" text="CREAR IDIOMA" />
+                                    <ComboBox fx:id="cbxCreaOfL" layoutX="205.0" layoutY="210.0" prefHeight="25.0" prefWidth="130.0" />
+                                </children>
+                            </Pane>
+                            <Label layoutX="418.0" layoutY="75.0" text="NUEVO LENGUAJE">
+                                <font>
+                                    <Font size="16.0" />
+                                </font>
+                            </Label>
+                        </children>
+                    </Pane>
+                    <Pane fx:id="paneCrearP" layoutX="10.0" layoutY="10.0" prefHeight="603.3333333333334" prefWidth="910.0" style="-fx-background-color: #EBEFEB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <children>
+                            <Pane layoutX="47.0" layoutY="127.0" prefHeight="387.0" prefWidth="837.0">
+                                <children>
+                                    <Label layoutX="54.0" layoutY="49.0" prefHeight="28.0" prefWidth="109.0" text="Código">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="txtCreaCodP" layoutX="52.0" layoutY="79.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="119.0" />
+                                    <Label layoutX="201.0" layoutY="54.0" prefHeight="20.0" prefWidth="110.0" text="Nombre">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="521.0" layoutY="158.0" prefHeight="27.0" prefWidth="101.0" text="Continente">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="663.0" layoutY="153.0" prefHeight="30.0" prefWidth="72.0" text="Región">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="510.0" layoutY="266.0" prefHeight="27.0" prefWidth="125.0" text="Área de superficie">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="662.0" layoutY="268.0" prefHeight="20.0" prefWidth="147.0" text="Año de independencia">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="359.0" layoutY="161.0" prefHeight="20.0" prefWidth="116.0" text="Población">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="54.0" layoutY="261.0" prefHeight="36.0" prefWidth="111.0" text="Esperanza de vida">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="202.0" layoutY="160.0" prefHeight="16.0" prefWidth="117.0" text="Nombre local">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="523.0" layoutY="56.0" prefHeight="20.0" prefWidth="39.0" text="PIB">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="663.0" layoutY="52.0" prefHeight="28.0" prefWidth="56.0" text="PIBOld">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="203.0" layoutY="269.0" prefHeight="20.0" prefWidth="122.0" text="Forma de gobierno">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="364.0" layoutY="269.0" text="Cabeza de estado">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="358.0" layoutY="50.0" prefHeight="28.0" prefWidth="70.0" text="Capital">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="54.0" layoutY="159.0" prefHeight="18.0" prefWidth="113.0" text="Código 2">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="txtCreaNombreP" layoutX="197.0" layoutY="78.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="108.0" />
+                                    <TextField fx:id="txtCreaNombreLocalP" layoutX="197.0" layoutY="192.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="119.0" />
+                                    <TextField fx:id="txtCreaPoblacionP" layoutX="359.0" layoutY="191.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="108.0" />
+                                    <TextField fx:id="txtCreaRegionP" layoutX="663.0" layoutY="191.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="108.0" />
+                                    <TextField fx:id="txtCreaEdvP" layoutX="55.0" layoutY="309.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="130.0" />
+                                    <TextField fx:id="txtCreaGobP" layoutX="203.0" layoutY="308.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="138.0" />
+                                    <TextField fx:id="txtCreaPresP" layoutX="363.0" layoutY="307.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="117.0" />
+                                    <TextField fx:id="txtCreaSupP" layoutX="510.0" layoutY="306.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="130.0" />
+                                    <TextField fx:id="txtCreaIndP" layoutX="664.0" layoutY="307.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="130.0" />
+                                    <TextField fx:id="txtCreaCod2P" layoutX="53.0" layoutY="193.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="119.0" />
+                                    <TextField fx:id="txtCreaCapitalP" layoutX="350.0" layoutY="78.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="119.0" />
+                                    <TextField fx:id="txtCreaPIBP" layoutX="506.0" layoutY="80.0" onKeyReleased="#doFiilTextINV" prefHeight="23.0" prefWidth="119.0" />
+                                    <TextField fx:id="txtCreaPBIoldP" layoutX="659.0" layoutY="78.0" onKeyReleased="#doFiilTextINV" prefHeight="23.0" prefWidth="119.0" />
+                                    <ComboBox fx:id="cbxCreaContinenteP1" layoutX="516.0" layoutY="190.0" prefHeight="25.0" prefWidth="114.0" />
+                                </children>
+                            </Pane>
+                            <Label layoutX="418.0" layoutY="75.0" text="NUEVO PAÍS">
+                                <font>
+                                    <Font size="16.0" />
+                                </font>
+                            </Label>
+                            <Button fx:id="btnCrearP" layoutX="359.0" layoutY="514.0" mnemonicParsing="false" onAction="#doCrearP" prefHeight="43.0" prefWidth="276.0" text="CREAR PAÍS" />
+                        </children>
+                    </Pane>
+                    <Pane fx:id="paneMEL" layoutX="20.0" layoutY="20.0" onKeyReleased="#doTextFillNombreP" prefHeight="583.3333333333334" prefWidth="890.0" style="-fx-background-color: #EBEFEB;">
+                        <children>
+                            <TableView fx:id="tblIdiomasME" layoutX="30.0" layoutY="185.0" onMouseClicked="#getSelectedL" prefHeight="366.0" prefWidth="845.0">
+                                <columns>
+                                    <TableColumn fx:id="colCountryCodL" prefWidth="151.99999237060547" text="Código País" />
+                                    <TableColumn fx:id="collanguageL" prefWidth="253.60000610351562" text="Idioma" />
+                                    <TableColumn fx:id="colisOffL" prefWidth="240.80001831054688" text="Es oficial" />
+                                    <TableColumn fx:id="colPercentageL" minWidth="0.0" prefWidth="202.39996337890625" text="Porcentaje" />
+                                </columns>
+                            </TableView>
+                            <TextField fx:id="txtFiltroCod1MEL" layoutX="33.0" layoutY="127.0" onKeyReleased="#doTextFillCodL" />
+                            <TextField fx:id="txtFiltroNombreMEL" layoutX="296.0" layoutY="127.0" onKeyReleased="#doTextFillNombreL" />
+                            <Label layoutX="30.0" layoutY="99.0" prefHeight="21.0" prefWidth="156.0" text="Filtrar por código">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="253.0" layoutY="99.0" prefHeight="21.0" prefWidth="149.0" text="Filtrar por nombre">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <Button fx:id="btnModificarL" layoutX="672.0" layoutY="66.0" mnemonicParsing="false" onAction="#goModificarL" prefHeight="41.0" prefWidth="189.0" text="Modificar" />
+                            <Button fx:id="btnEliminarL" layoutX="673.0" layoutY="117.0" mnemonicParsing="false" onAction="#goEliminarL" prefHeight="41.0" prefWidth="189.0" text="Eliminar" />
+                            <Label layoutX="314.0" layoutY="57.0" text="MODIFICAR Y ELIMINAR">
+                                <font>
+                                    <Font size="15.0" />
+                                </font>
+                            </Label>
+                        </children>
+                    </Pane>
+                    <Pane fx:id="paneMEP" onKeyReleased="#doTextFillNombreP" prefHeight="583.3333333333334" prefWidth="890.0" style="-fx-background-color: #EBEFEB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <children>
+                            <TableView fx:id="tblPaisME" layoutX="30.0" layoutY="185.0" onMouseClicked="#getSelected" prefHeight="366.0" prefWidth="900.0">
+                                <columns>
+                                    <TableColumn fx:id="colCodigoME" prefWidth="44.0" text="Código" />
+                                    <TableColumn fx:id="colNombreME" prefWidth="36.0" text="Nombre" />
+                                    <TableColumn fx:id="colContinenteME" prefWidth="52.0" text="Continente" />
+                                    <TableColumn fx:id="colRegionME" prefWidth="53.0" text="Región" />
+                                    <TableColumn fx:id="colAreaSuperficieME" minWidth="0.0" prefWidth="60.0" text="Área de superficie" />
+                                    <TableColumn fx:id="colAñoIndepeME" minWidth="0.0" prefWidth="85.0" text="Año de independencia" />
+                                    <TableColumn fx:id="colPoblacionME" prefWidth="41.5555419921875" text="Población" />
+                                    <TableColumn fx:id="colEspeVidaME" prefWidth="60.0" text="Esperanza de vida" />
+                                    <TableColumn fx:id="colPibME" prefWidth="31.199981689453125" text="PIB" />
+                                    <TableColumn fx:id="colPibOld" prefWidth="66.0" text="PIBOld" />
+                                    <TableColumn fx:id="colNomLocalME" prefWidth="73.0" text="Nombre local" />
+                                    <TableColumn fx:id="colFormGobME" minWidth="0.0" prefWidth="72.0" text="Forma de gobierno" />
+                                    <TableColumn fx:id="colCabEstME" prefWidth="92.0" text="Cabeza de estado" />
+                                    <TableColumn fx:id="colCapitalME" minWidth="0.0" prefWidth="65.0" text="Capital" />
+                                    <TableColumn fx:id="colCodigo2ME" minWidth="0.0" prefWidth="65.0" text="Código 2" />
+                                </columns>
+                            </TableView>
+                            <TextField fx:id="txtFiltroCod1MEP" layoutX="34.0" layoutY="133.0" onKeyReleased="#doTextFillCodP" />
+                            <TextField fx:id="txtFiltroNombreMEP" layoutX="217.0" layoutY="133.0" onKeyReleased="#doTextFillNombreP" />
+                            <TextField fx:id="txtFiltroNombreLocalMEP" layoutX="402.0" layoutY="133.0" onKeyReleased="#doTextFillNombreLocalP" prefHeight="25.0" prefWidth="158.0" />
+                            <Label layoutX="30.0" layoutY="105.0" prefHeight="21.0" prefWidth="156.0" text="Filtrar por código">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="191.0" layoutY="102.0" prefHeight="21.0" prefWidth="149.0" text="Filtrar por nombre">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="353.0" layoutY="102.0" prefHeight="21.0" prefWidth="167.0" text="Filtrar por nombre local">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <Button fx:id="btnModificarP" layoutX="672.0" layoutY="66.0" mnemonicParsing="false" onAction="#doModificarPane" prefHeight="41.0" prefWidth="189.0" text="Modificar" />
+                            <Button fx:id="btnEliminarP" layoutX="673.0" layoutY="117.0" mnemonicParsing="false" onAction="#doEliminarP" prefHeight="41.0" prefWidth="189.0" text="Eliminar" />
+                            <Label layoutX="340.0" layoutY="66.0" text="MODIFICAR Y ELIMINAR">
+                                <font>
+                                    <Font size="15.0" />
+                                </font>
+                            </Label>
+                        </children>
+                    </Pane>
+                    <Pane fx:id="paneMEC" layoutX="10.0" layoutY="10.0" onKeyReleased="#doTextFillNombreP" prefHeight="583.3333333333334" prefWidth="890.0" style="-fx-background-color: #EBEFEB;">
+                        <children>
+                            <TableView fx:id="tblCiudadesME" layoutX="30.0" layoutY="185.0" onMouseClicked="#getSelectedC" prefHeight="366.0" prefWidth="845.0">
+                                <columns>
+                                    <TableColumn fx:id="colIdMEC" prefWidth="151.9999771118164" text="ID" />
+                                    <TableColumn fx:id="colNombreMEC" prefWidth="181.60000610351562" text="Nombre" />
+                                    <TableColumn fx:id="codigoMEC" prefWidth="209.60000610351562" text="Código País" />
+                                    <TableColumn fx:id="colDistritoMEC" minWidth="0.0" prefWidth="148.79998779296875" text="Distrito" />
+                                    <TableColumn fx:id="colPoblacionMEC" minWidth="0.0" prefWidth="151.20001220703125" text="Población" />
+                                </columns>
+                            </TableView>
+                            <TextField fx:id="txtFiltroCod1MEC" layoutX="24.0" layoutY="140.0" onKeyReleased="#doTextFillCodC" />
+                            <TextField fx:id="txtFiltroNombreMEC" layoutX="199.0" layoutY="140.0" onKeyReleased="#doTextFillNombreC" />
+                            <TextField fx:id="txtFiltroCodPaisMEC" layoutX="374.0" layoutY="139.0" onKeyReleased="#doTextFilllCodPaisC" prefHeight="25.0" prefWidth="158.0" />
+                            <Label layoutX="31.0" layoutY="111.0" prefHeight="21.0" prefWidth="156.0" text="Filtrar por ID">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="192.0" layoutY="111.0" prefHeight="21.0" prefWidth="149.0" text="Filtrar por nombre">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="355.0" layoutY="111.0" prefHeight="21.0" prefWidth="167.0" text="Filtrar por código país">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <Button fx:id="btnModificarC" layoutX="672.0" layoutY="66.0" mnemonicParsing="false" onAction="#goModificarC" prefHeight="41.0" prefWidth="189.0" text="Modificar" />
+                            <Button fx:id="btnEliminarC" layoutX="673.0" layoutY="117.0" mnemonicParsing="false" onAction="#goEliminarC" prefHeight="41.0" prefWidth="189.0" text="Eliminar" />
+                            <Label layoutX="357.0" layoutY="66.0" text="MODIFICAR Y ELIMINAR">
+                                <font>
+                                    <Font size="15.0" />
+                                </font>
+                            </Label>
+                        </children>
+                    </Pane>
+                    <Pane fx:id="paneModificarC" layoutX="20.0" layoutY="20.0" prefHeight="619.3333333333334" prefWidth="920.0" style="-fx-background-color: #EBEFEB;">
+                        <children>
+                            <Pane layoutX="31.0" layoutY="96.0" prefHeight="387.0" prefWidth="801.0">
+                                <children>
+                                    <Label layoutX="65.0" layoutY="156.0" prefHeight="28.0" prefWidth="109.0" text="ID">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="txtModIDC" layoutX="63.0" layoutY="186.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="119.0" />
+                                    <Label layoutX="212.0" layoutY="161.0" prefHeight="20.0" prefWidth="110.0" text="Nombre">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="534.0" layoutY="163.0" prefHeight="20.0" prefWidth="78.0" text="Distrito">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="674.0" layoutY="159.0" prefHeight="28.0" prefWidth="76.0" text="Población">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="369.0" layoutY="157.0" prefHeight="28.0" prefWidth="102.0" text="Código del país">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="txtModNombreCi" layoutX="208.0" layoutY="185.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="108.0" />
+                                    <TextField fx:id="txtCodPM" layoutX="361.0" layoutY="185.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="119.0" />
+                                    <TextField fx:id="txtDistritoMC" layoutX="517.0" layoutY="187.0" onKeyReleased="#doFiilTextINV" prefHeight="23.0" prefWidth="119.0" />
+                                    <TextField fx:id="txtPoblacionMC" layoutX="670.0" layoutY="185.0" onKeyReleased="#doFiilTextINV" prefHeight="23.0" prefWidth="119.0" />
+                                </children>
+                            </Pane>
+                            <Label layoutX="418.0" layoutY="75.0" text="MODIFICAR CIUDAD" textFill="RED">
+                                <font>
+                                    <Font size="16.0" />
+                                </font>
+                            </Label>
+                            <Button fx:id="btnModC" layoutX="354.0" layoutY="490.0" mnemonicParsing="false" onAction="#doModC" prefHeight="43.0" prefWidth="276.0" text="MODIFICAR" />
+                        </children>
+                    </Pane>
+                    <Pane fx:id="paneMODL" layoutX="20.0" layoutY="20.0" prefHeight="603.3333333333334" prefWidth="910.0" style="-fx-background-color: #EBEFEB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <children>
+                            <Pane layoutX="55.0" layoutY="119.0" prefHeight="387.0" prefWidth="845.0">
+                                <children>
+                                    <Label layoutX="227.0" layoutY="50.0" prefHeight="28.0" prefWidth="77.0" text="Código País" textAlignment="CENTER">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="txtCountryCodeL" layoutX="203.0" layoutY="78.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="119.0" />
+                                    <Label layoutX="237.0" layoutY="170.0" prefHeight="20.0" prefWidth="59.0" text="Oficial">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="520.0" layoutY="54.0" prefHeight="20.0" prefWidth="65.0" text="Idioma">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="518.0" layoutY="166.0" prefHeight="28.0" prefWidth="71.0" text="Porcentaje">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="txtLanguaje" layoutX="487.0" layoutY="77.0" onKeyReleased="#doFiilTextINV" prefHeight="23.0" prefWidth="119.0" />
+                                    <TextField fx:id="txtPorcentajeL" layoutX="501.0" layoutY="210.0" onKeyReleased="#doFiilTextINV" prefHeight="23.0" prefWidth="119.0" />
+                                    <ComboBox fx:id="cbxCreaOfL1" layoutX="205.0" layoutY="210.0" prefHeight="25.0" prefWidth="130.0" />
+                                    <Button fx:id="btnGuardarCambiosL" layoutX="277.0" layoutY="329.0" mnemonicParsing="false" onAction="#doUpdateL" prefHeight="43.0" prefWidth="276.0" text="MODIFICAR" />
+                                </children>
+                            </Pane>
+                            <Label layoutX="433.0" layoutY="87.0" text="MODIFICAR" textFill="RED">
+                                <font>
+                                    <Font size="16.0" />
+                                </font>
+                            </Label>
+                        </children>
+                    </Pane>
+                    <Pane fx:id="paneModificar" layoutY="19.0" prefHeight="603.3333333333334" prefWidth="910.0" style="-fx-background-color: #EBEFEB;">
+                        <children>
+                            <Pane layoutX="31.0" layoutY="96.0" prefHeight="387.0" prefWidth="837.0">
+                                <children>
+                                    <Label layoutX="54.0" layoutY="49.0" prefHeight="28.0" prefWidth="109.0" text="Código">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="txtCodM" editable="false" layoutX="52.0" layoutY="79.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="119.0" />
+                                    <Label layoutX="201.0" layoutY="54.0" prefHeight="20.0" prefWidth="110.0" text="Nombre">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="521.0" layoutY="158.0" prefHeight="27.0" prefWidth="101.0" text="Continente">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="663.0" layoutY="153.0" prefHeight="30.0" prefWidth="72.0" text="Región">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="510.0" layoutY="266.0" prefHeight="27.0" prefWidth="125.0" text="Área de superficie">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="662.0" layoutY="268.0" prefHeight="20.0" prefWidth="147.0" text="Año de independencia">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="359.0" layoutY="161.0" prefHeight="20.0" prefWidth="116.0" text="Población">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="54.0" layoutY="261.0" prefHeight="36.0" prefWidth="111.0" text="Esperanza de vida">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="202.0" layoutY="160.0" prefHeight="16.0" prefWidth="117.0" text="Nombre local">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="523.0" layoutY="56.0" prefHeight="20.0" prefWidth="39.0" text="PIB">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="663.0" layoutY="52.0" prefHeight="28.0" prefWidth="56.0" text="PIBOld">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="203.0" layoutY="269.0" prefHeight="20.0" prefWidth="122.0" text="Forma de gobierno">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="364.0" layoutY="269.0" text="Cabeza de estado">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="358.0" layoutY="50.0" prefHeight="28.0" prefWidth="70.0" text="Capital">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="54.0" layoutY="159.0" prefHeight="18.0" prefWidth="113.0" text="Código 2">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="txtNombreM" layoutX="197.0" layoutY="78.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="108.0" />
+                                    <TextField fx:id="txtNombreLocalM" layoutX="197.0" layoutY="192.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="119.0" />
+                                    <TextField fx:id="txtPoblacionM" layoutX="359.0" layoutY="191.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="108.0" />
+                                    <TextField fx:id="txtRegionM" layoutX="663.0" layoutY="191.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="108.0" />
+                                    <TextField fx:id="txtEdvM" layoutX="55.0" layoutY="309.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="130.0" />
+                                    <TextField fx:id="txtGobM" layoutX="203.0" layoutY="308.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="138.0" />
+                                    <TextField fx:id="txtPresM" layoutX="363.0" layoutY="307.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="117.0" />
+                                    <TextField fx:id="txtSupM" layoutX="510.0" layoutY="306.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="130.0" />
+                                    <TextField fx:id="txtIndM" layoutX="664.0" layoutY="307.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="130.0" />
+                                    <TextField fx:id="txtCod2M2" layoutX="53.0" layoutY="193.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="119.0" />
+                                    <TextField fx:id="txtCapitalM" layoutX="350.0" layoutY="78.0" onKeyReleased="#doFiilTextINV" prefHeight="25.0" prefWidth="119.0" />
+                                    <TextField fx:id="txtPIBM" layoutX="506.0" layoutY="80.0" onKeyReleased="#doFiilTextINV" prefHeight="23.0" prefWidth="119.0" />
+                                    <TextField fx:id="txtPibOldM" layoutX="659.0" layoutY="78.0" onKeyReleased="#doFiilTextINV" prefHeight="23.0" prefWidth="119.0" />
+                                    <ComboBox fx:id="cbxCreaContinenteP" layoutX="508.0" layoutY="191.0" prefHeight="25.0" prefWidth="130.0" />
+                                </children>
+                            </Pane>
+                            <Label layoutX="418.0" layoutY="75.0" text="MODIFICAR" textFill="#ff0505">
+                                <font>
+                                    <Font size="16.0" />
+                                </font>
+                            </Label>
+                            <Button fx:id="btnModificarM" layoutX="312.0" layoutY="483.0" mnemonicParsing="false" onAction="#doModificarM" prefHeight="43.0" prefWidth="276.0" text="MODIFICAR" />
+                        </children>
+                    </Pane>
+                    <Pane fx:id="paneBAL" layoutX="20.0" layoutY="20.0" prefHeight="623.3333333333334" prefWidth="930.0" style="-fx-background-color: #EBEFEB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <children>
+                            <Pane layoutX="-37.0" layoutY="-25.0" prefHeight="171.0" prefWidth="911.0">
+                                <children>
+                                    <CheckBox fx:id="chbxccodeBAL" layoutX="75.0" layoutY="119.0" mnemonicParsing="false" onAction="#doActColCCodeBAL" selected="true" text="Código de País">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </CheckBox>
+                                    <CheckBox fx:id="chbxlanguageBAL" layoutX="219.0" layoutY="119.0" mnemonicParsing="false" onAction="#doActColLangBAL" selected="true" text="Lenguaje">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </CheckBox>
+                                    <CheckBox fx:id="chbxisoffBAL" layoutX="326.0" layoutY="119.0" mnemonicParsing="false" onAction="#doActIsOffBAL" prefWidth="102.0" selected="true" text="Es oficial">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </CheckBox>
+                                    <CheckBox fx:id="chbxpercBAL" layoutX="428.0" layoutY="119.0" mnemonicParsing="false" onAction="#doActColPercBAL" selected="true" text="Porcentaje">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </CheckBox>
+                                    <Label layoutX="661.0" layoutY="120.0" prefHeight="20.0" prefWidth="142.0" text="Limita la búsqueda a:">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="txtLimitBAL" layoutX="795.0" layoutY="117.0" onKeyReleased="#filtroAvanzadoL" prefHeight="15.0" prefWidth="110.0" />
+                           <Label layoutX="61.0" layoutY="96.0" prefHeight="20.0" prefWidth="263.0" text="Marque las columnas que desea ver:">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Label>
+                                </children>
+                            </Pane>
+                            <Pane layoutX="14.0" layoutY="126.0" prefHeight="402.0" prefWidth="837.0">
+                                <children>
+                                    <Label layoutX="35.0" layoutY="17.0" prefHeight="28.0" prefWidth="109.0" text="Código de País">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="txtcountrycodeBAL" layoutX="35.0" layoutY="43.0" onKeyReleased="#filtroAvanzadoL" prefHeight="25.0" prefWidth="81.0" />
+                                    <Label layoutX="143.0" layoutY="22.0" prefHeight="20.0" prefWidth="110.0" text="Idioma">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="399.0" layoutY="14.0" prefHeight="36.0" prefWidth="111.0" text="Porcentaje">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="270.0" layoutY="22.0" prefHeight="18.0" prefWidth="113.0" text="Oficial">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="txtlangBAL" layoutX="144.0" layoutY="44.0" onKeyReleased="#filtroAvanzadoL" prefHeight="25.0" prefWidth="108.0" />
+                                    <TextField fx:id="txtpercentageBAL" layoutX="399.0" layoutY="44.0" onKeyReleased="#filtroAvanzadoL" prefHeight="25.0" prefWidth="130.0" />
+                                    <TextField fx:id="txtisoffBAL" layoutX="270.0" layoutY="44.0" onKeyReleased="#filtroAvanzadoL" prefHeight="25.0" prefWidth="119.0" />
+                                    <ComboBox fx:id="cbxValoresNumLBA" layoutX="556.0" layoutY="45.0" onAction="#doCompararLBA" prefHeight="25.0" prefWidth="95.0" />
+                                    <ComboBox fx:id="cbxcomparadorLBA" layoutX="661.0" layoutY="45.0" onAction="#doCompararLBA" prefHeight="25.0" prefWidth="59.0" />
+                                    <TextField fx:id="txtcomparaUsrLBA" disable="true" layoutX="731.0" layoutY="45.0" onKeyReleased="#filtroAvanzadoL" prefHeight="25.0" prefWidth="89.0" />
+                                    <Label layoutX="556.0" layoutY="21.0" text="Comparador numérico">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                  <TableView fx:id="tblLenguajesLBA" layoutX="14.0" layoutY="126.0" prefHeight="349.0" prefWidth="856.0">
+                                      <columns>
+                                          <TableColumn fx:id="colCountryCodLBA" prefWidth="82.0" text="Cod. País" />
+                                          <TableColumn fx:id="collanguageLBA" prefWidth="431.0" text="Lenguaje" />
+                                          <TableColumn fx:id="colisOffLBA" prefWidth="108.0" text="Es oficial" />
+                                          <TableColumn fx:id="colPercentageLBA" prefWidth="245.0" text="Porcentaje" />
+                                      </columns>
+                                  </TableView>
+                           <ComboBox fx:id="cbxSBBAL" layoutX="229.0" layoutY="93.0" onAction="#filtroAvanzadoL" prefHeight="25.0" prefWidth="130.0" />
+                           <Label layoutX="18.0" layoutY="91.0" prefHeight="28.0" prefWidth="211.0" text="Seleccione tipo de búsqueda">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Label>
+                           <Label layoutX="18.0" prefHeight="20.0" prefWidth="81.0" text="Buscadores">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Label>
+                                </children>
+                            </Pane>
+                        </children>
+                    </Pane>
+
+                    <Pane fx:id="paneBAC" layoutX="-15.0" prefHeight="623.3333333333334" prefWidth="930.0" style="-fx-background-color: #EBEFEB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
+                        <children>
+                            <Pane layoutX="-38.0" layoutY="-46.0" prefHeight="202.0" prefWidth="950.0">
+                                <children>
+                                    <CheckBox fx:id="chbxidBAC" layoutX="92.0" layoutY="132.0" mnemonicParsing="false" onAction="#doActColIDBAC" selected="true" text="ID">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </CheckBox>
+                                    <CheckBox fx:id="chbxnameBAC" layoutX="182.0" layoutY="131.0" mnemonicParsing="false" onAction="#doActColnameBAC" selected="true" text="Nombre">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </CheckBox>
+                                    <CheckBox fx:id="chbxcountryCodeBAC" layoutX="306.0" layoutY="130.0" mnemonicParsing="false" onAction="#doActColCCodeBAC" prefHeight="20.0" prefWidth="125.0" selected="true" text="Código de País">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </CheckBox>
+                                    <CheckBox fx:id="chbxdistrictBAC" layoutX="467.0" layoutY="131.0" mnemonicParsing="false" onAction="#doActColdistrictBAC" selected="true" text="Distrito">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </CheckBox>
+                                    <CheckBox fx:id="chbxpopBAC" layoutX="582.0" layoutY="130.0" mnemonicParsing="false" onAction="#doActColpopBAC" selected="true" text="Población">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </CheckBox>
+                                    <TextField fx:id="txtlimitBAC" layoutX="833.0" layoutY="130.0" onKeyReleased="#filtroAvanzadoC" prefHeight="15.0" prefWidth="110.0" />
+                           <Label layoutX="89.0" layoutY="110.0" prefHeight="20.0" prefWidth="263.0" text="Marque las columnas que desea ver:">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Label>
+                           <Label layoutX="695.0" layoutY="132.0" text="Limita la búsqueda a:">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Label>
+                           <Label layoutX="90.0" layoutY="162.0" prefHeight="20.0" prefWidth="81.0" text="Buscadores:">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Label>
+                                </children>
+                            </Pane>
+                            <Pane layoutX="52.0" layoutY="135.0" prefHeight="402.0" prefWidth="837.0">
+                                <children>
+                                    <TableView fx:id="tblCiudadCBA" layoutX="-5.0" layoutY="98.0" prefHeight="387.0" prefWidth="867.0">
+                                        <columns>
+                                            <TableColumn fx:id="colIdCBA" prefWidth="62.0" text="ID" />
+                                            <TableColumn fx:id="colNameCBA" prefWidth="221.11112213134766" text="Nombre" />
+                                            <TableColumn fx:id="colCountryCodCBA" prefWidth="141.55557250976562" text="Código de país" />
+                                            <TableColumn fx:id="colDistrictCBA" prefWidth="185.77777099609375" text="Distrito" />
+                                            <TableColumn fx:id="colPopulationCBA" prefWidth="223.111083984375" text="Población" />
+                                        </columns>
+                                    </TableView>
+                           <ComboBox fx:id="cbxSBBAC" layoutX="211.0" layoutY="64.0" onAction="#filtroAvanzadoC" prefHeight="25.0" prefWidth="130.0" />
+                           <Label layoutY="62.0" prefHeight="28.0" prefWidth="211.0" text="Seleccionetipo de búsqueda">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Label>
+                                    <TextField fx:id="txtidBAC" layoutX="7.0" layoutY="22.0" onKeyReleased="#filtroAvanzadoC" prefHeight="25.0" prefWidth="56.0" />
+                                    <TextField fx:id="txtnameBAC" layoutX="73.0" layoutY="22.0" onKeyReleased="#filtroAvanzadoC" prefHeight="25.0" prefWidth="108.0" />
+                                    <Label layoutX="7.0" prefHeight="28.0" prefWidth="39.0" text="ID">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="72.0" layoutY="4.0" prefHeight="20.0" prefWidth="110.0" text="Nombre">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="192.0" prefHeight="28.0" prefWidth="95.0" text="Código de País">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="320.0" layoutY="4.0" prefHeight="20.0" prefWidth="56.0" text="Distrito">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="452.0" prefHeight="28.0" prefWidth="78.0" text="Población">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </Label>
+                                </children>
+                            </Pane>
+                              <TextField fx:id="txtcountrycodeBAC" layoutX="243.0" layoutY="157.0" onKeyReleased="#filtroAvanzadoC" prefHeight="25.0" prefWidth="119.0" />
+                              <TextField fx:id="txtdistrictBAC" layoutX="373.0" layoutY="157.0" onKeyReleased="#filtroAvanzadoC" prefHeight="23.0" prefWidth="119.0" />
+                              <TextField fx:id="txtpopBAC" layoutX="503.0" layoutY="157.0" onKeyReleased="#filtroAvanzadoC" prefHeight="23.0" prefWidth="119.0" />
+                              <ComboBox fx:id="cbxValoresNumCBA" layoutX="628.0" layoutY="157.0" onAction="#doCompararCBAC" prefHeight="25.0" prefWidth="95.0" />
+                              <ComboBox fx:id="cbxcomparadorCBA" layoutX="733.0" layoutY="157.0" onAction="#doCompararCBAC" prefHeight="25.0" prefWidth="59.0" />
+                              <TextField fx:id="txtcomparaUsrCBA" disable="true" layoutX="804.0" layoutY="157.0" onKeyReleased="#filtroAvanzadoC" prefHeight="25.0" prefWidth="89.0" />
+                              <Label layoutX="628.0" layoutY="135.0" text="Comparador numerico">
+                        <font>
+                           <Font size="14.0" />
+                        </font></Label>
+                        </children>
+                    </Pane>
+        
+                    <Pane fx:id="paneBAP" prefHeight="633.0" prefWidth="1054.0" style="-fx-background-color: #EBEFEB;">
+                        <children>
+                            <CheckBox fx:id="chbxCodPBA" layoutX="32.0" layoutY="84.0" mnemonicParsing="false" onAction="#doActColCodPBA" selected="true" text="Código">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </CheckBox>
+                            <CheckBox fx:id="chbxNomPBA" layoutX="108.0" layoutY="84.0" mnemonicParsing="false" onAction="#doActColNomPBA" selected="true" text="Nombre">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </CheckBox>
+                            <CheckBox fx:id="chbxContPBA" layoutX="193.0" layoutY="84.0" mnemonicParsing="false" onAction="#doActColContPBA" prefHeight="20.0" prefWidth="95.0" selected="true" text="Continente">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </CheckBox>
+                            <CheckBox fx:id="chbxRegPBA" layoutX="295.0" layoutY="84.0" mnemonicParsing="false" onAction="#doActColRegPBA" selected="true" text="Región">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </CheckBox>
+                            <CheckBox fx:id="chbxSurfAPBA" layoutX="376.0" layoutY="84.0" mnemonicParsing="false" onAction="#doActColSurfAPBA" prefHeight="20.0" prefWidth="112.0" selected="true" text="Área de superficie">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </CheckBox>
+                            <CheckBox fx:id="chbxIndepYPBA" layoutX="494.0" layoutY="84.0" mnemonicParsing="false" onAction="#doActColIndepYPBA" prefHeight="20.0" prefWidth="108.0" selected="true" text="Año de independencia">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </CheckBox>
+                            <CheckBox fx:id="chbxPopulationPBA" layoutX="609.0" layoutY="84.0" mnemonicParsing="false" onAction="#doActColPopulPBA" selected="true" text="Población">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </CheckBox>
+                            <CheckBox fx:id="chbxLifeExpPBA" layoutX="699.0" layoutY="84.0" mnemonicParsing="false" onAction="#doActColLifeExpPBA" prefHeight="20.0" prefWidth="130.0" selected="true" text="Esperanza de vida">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </CheckBox>
+                            <CheckBox fx:id="chbxgnpPBA" layoutX="835.0" layoutY="84.0" mnemonicParsing="false" onAction="#doActColgnpPBA" selected="true" text="PIB">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </CheckBox>
+                            <CheckBox fx:id="chbxgnpOldPBA" layoutX="34.0" layoutY="113.0" mnemonicParsing="false" onAction="#doActColgnpOldPBA" selected="true" text="PIBold">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </CheckBox>
+                            <CheckBox fx:id="chbxlocalNPBA" layoutX="109.0" layoutY="113.0" mnemonicParsing="false" onAction="#doActCollocalNPBA" selected="true" text="Nombre local">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </CheckBox>
+                            <CheckBox fx:id="chbxCapPBA" layoutX="464.0" layoutY="113.0" mnemonicParsing="false" onAction="#doActColcapPBA" selected="true" text="Capital">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </CheckBox>
+                            <CheckBox fx:id="chbxGovFormPBA" layoutX="223.0" layoutY="113.0" mnemonicParsing="false" onAction="#doActColGovFormPBA" prefHeight="20.0" prefWidth="125.0" selected="true" text="Forma de gobierno">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </CheckBox>
+                            <CheckBox fx:id="chbxHeadOfSPBA" layoutX="348.0" layoutY="113.0" mnemonicParsing="false" onAction="#doActColHeadOfSPBA" prefHeight="20.0" prefWidth="116.0" selected="true" text="Cabeza de Estado">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </CheckBox>
+                            <CheckBox fx:id="chbxCode2PBA" layoutX="541.0" layoutY="113.0" mnemonicParsing="false" onAction="#doActColCode2PBA" prefHeight="20.0" prefWidth="86.0" selected="true" text="Código 2">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </CheckBox>
+                            <Pane layoutX="46.0" layoutY="218.0" prefHeight="349.0" prefWidth="825.0">
+                                <children>
+                                    <TableView fx:id="tblPaisPBA" layoutX="-22.0" layoutY="115.0" prefHeight="271.0" prefWidth="1034.0">
+                                        <columns>
+                                            <TableColumn fx:id="colCodPBA" prefWidth="31.333330154418945" text="Cod" />
+                                            <TableColumn fx:id="colNamePBA" prefWidth="52.88886642456055" text="Nombre" />
+                                            <TableColumn fx:id="colContiPBA" prefWidth="46.0" text="Continente" />
+                                            <TableColumn fx:id="colRegionPBA" prefWidth="48.88887023925781" text="Región" />
+                                            <TableColumn fx:id="colSurfAPBA" minWidth="2.666748046875" prefWidth="46.0" text="Área de superficie" />
+                                            <TableColumn fx:id="colIndYPBA" prefWidth="51.0" text="Año de indep" />
+                                            <TableColumn fx:id="colPopulationPBA" prefWidth="36.0" text="Población" />
+                                            <TableColumn fx:id="colLifeEPBA" text="Esperanza de vida" />
+                                            <TableColumn fx:id="colGNPPBA" minWidth="0.0" prefWidth="67.0" text="PIB" />
+                                            <TableColumn fx:id="colGNPOPBA" minWidth="0.0" prefWidth="42.0" text="PIBOld" />
+                                            <TableColumn fx:id="colLocalNPBA" minWidth="0.0" prefWidth="98.0" text="Nombre local" />
+                                            <TableColumn fx:id="colGovFormPBA" prefWidth="119.0" text="Forma de gobierno" />
+                                            <TableColumn fx:id="colHeadOSPBA" prefWidth="97.0" text="Cabeza de estado" />
+                                            <TableColumn fx:id="colCapitalPBA" minWidth="0.0" prefWidth="88.0" text="Capital" />
+                                            <TableColumn fx:id="colCod2PBA" prefWidth="120.0" text="Cod2" />
+                                        </columns>
+                                    </TableView>
+                           <ComboBox fx:id="cbxSBBAP" layoutX="195.0" layoutY="82.0" onAction="#filtroAvanzadoP" prefHeight="25.0" prefWidth="130.0" />
+                           <Label layoutX="-16.0" layoutY="80.0" prefHeight="28.0" prefWidth="211.0" text="Seleccione su tipo de búsqueda :">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Label>
+                                  <ComboBox fx:id="cbxValoresNumPBA" layoutX="549.0" layoutY="80.0" onAction="#doCompararPBA" prefHeight="25.0" prefWidth="95.0" />
+                                  <ComboBox fx:id="cbxcomparadorPBA" layoutX="651.0" layoutY="80.0" onAction="#doCompararPBA" prefHeight="25.0" prefWidth="59.0" />
+                                  <TextField fx:id="txtcomparaUsrPBA" disable="true" layoutX="722.0" layoutY="80.0" onKeyReleased="#filtroAvanzadoP" prefHeight="25.0" prefWidth="89.0" />
+                           <Label layoutX="547.0" layoutY="59.0" text="Comparador numérico">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Label>
+                                </children>
+                            </Pane>
+                            <Label layoutX="638.0" layoutY="113.0" prefHeight="20.0" prefWidth="138.0" text="Limita la búsqueda a:">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <TextField fx:id="txtFiltroTLPBA" layoutX="770.0" layoutY="111.0" onKeyReleased="#filtroAvanzadoP" prefHeight="15.0" prefWidth="110.0" />
+                     <Label layoutX="32.0" layoutY="62.0" prefHeight="20.0" prefWidth="263.0" text="Marque las columnas que desea ver:">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="32.0" layoutY="146.0" prefHeight="20.0" prefWidth="81.0" text="Buscadores:">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                              <Label layoutX="32.0" layoutY="166.0" prefHeight="28.0" prefWidth="109.0" text="Código">
+                                  <font>
+                                      <Font size="14.0" />
+                                  </font>
+                              </Label>
+                              <TextField fx:id="txtFiltroTCPBA" layoutX="31.0" layoutY="192.0" onKeyReleased="#filtroAvanzadoP" prefHeight="25.0" prefWidth="65.0" />
+                              <Label layoutX="103.0" layoutY="170.0" prefHeight="20.0" prefWidth="64.0" text="Nombre">
+                                  <font>
+                                      <Font size="14.0" />
+                                  </font>
+                              </Label>
+                              <Label layoutX="198.0" layoutY="165.0" prefHeight="27.0" prefWidth="101.0" text="Continente">
+                                  <font>
+                                      <Font size="14.0" />
+                                  </font>
+                              </Label>
+                              <Label layoutX="315.0" layoutY="164.0" prefHeight="30.0" prefWidth="72.0" text="Región">
+                                  <font>
+                                      <Font size="14.0" />
+                                  </font>
+                              </Label>
+                              <Label layoutX="565.0" layoutY="171.0" prefHeight="20.0" prefWidth="86.0" text="Año de independencia">
+                                  <font>
+                                      <Font size="14.0" />
+                                  </font>
+                              </Label>
+                              <Label layoutX="659.0" layoutY="169.0" prefHeight="20.0" prefWidth="116.0" text="Población">
+                                  <font>
+                                      <Font size="14.0" />
+                                  </font>
+                              </Label>
+                              <Label layoutX="770.0" layoutY="161.0" prefHeight="36.0" prefWidth="111.0" text="Esperanza de vida">
+                                  <font>
+                                      <Font size="14.0" />
+                                  </font>
+                              </Label>
+                              <Label layoutX="159.0" layoutY="230.0" prefHeight="16.0" prefWidth="117.0" text="Nombre local">
+                                  <font>
+                                      <Font size="14.0" />
+                                  </font>
+                              </Label>
+                              <Label layoutX="32.0" layoutY="230.0" prefHeight="20.0" prefWidth="39.0" text="PIB">
+                                  <font>
+                                      <Font size="14.0" />
+                                  </font>
+                              </Label>
+                              <Label layoutX="96.0" layoutY="226.0" prefHeight="28.0" prefWidth="56.0" text="PIBOld">
+                                  <font>
+                                      <Font size="14.0" />
+                                  </font>
+                              </Label>
+                              <Label layoutX="282.0" layoutY="230.0" prefHeight="20.0" prefWidth="122.0" text="Forma de gobierno">
+                                  <font>
+                                      <Font size="14.0" />
+                                  </font>
+                              </Label>
+                              <Label layoutX="429.0" layoutY="230.0" text="Cabeza de estado">
+                                  <font>
+                                      <Font size="14.0" />
+                                  </font>
+                              </Label>
+                              <Label layoutX="557.0" layoutY="226.0" prefHeight="28.0" prefWidth="70.0" text="Capital">
+                                  <font>
+                                      <Font size="14.0" />
+                                  </font>
+                              </Label>
+                              <Label layoutX="651.0" layoutY="230.0" prefHeight="20.0" prefWidth="64.0" text="Código 2">
+                                  <font>
+                                      <Font size="14.0" />
+                                  </font>
+                              </Label>
+                              <TextField fx:id="txtFiltroTNPBA" layoutX="104.0" layoutY="192.0" onKeyReleased="#filtroAvanzadoP" prefHeight="25.0" prefWidth="90.0" />
+                              <TextField fx:id="txtFiltroTlocalNPBA" layoutX="158.0" layoutY="251.0" onKeyReleased="#filtroAvanzadoP" prefHeight="25.0" prefWidth="119.0" />
+                              <TextField fx:id="txtFiltroTpopPBA" layoutX="659.0" layoutY="192.0" onKeyReleased="#filtroAvanzadoP" prefHeight="25.0" prefWidth="108.0" />
+                              <TextField fx:id="txtFiltroTContPBA" layoutX="198.0" layoutY="192.0" onKeyReleased="#filtroAvanzadoP" prefHeight="25.0" prefWidth="112.0" />
+                              <TextField fx:id="txtFiltroTregPBA" layoutX="314.0" layoutY="192.0" onKeyReleased="#filtroAvanzadoP" prefHeight="25.0" prefWidth="108.0" />
+                              <TextField fx:id="txtFiltroTlifeExpPBA" layoutX="770.0" layoutY="192.0" onKeyReleased="#filtroAvanzadoP" prefHeight="25.0" prefWidth="116.0" />
+                              <TextField fx:id="txtFiltroTgovFormPBA" layoutX="282.0" layoutY="251.0" onKeyReleased="#filtroAvanzadoP" prefHeight="25.0" prefWidth="138.0" />
+                              <TextField fx:id="txtFiltroTheadOfSPBA" layoutX="429.0" layoutY="251.0" onKeyReleased="#filtroAvanzadoP" prefHeight="25.0" prefWidth="117.0" />
+                              <TextField fx:id="txtFiltroTsurfAPBA" layoutX="429.0" layoutY="192.0" onKeyReleased="#filtroAvanzadoP" prefHeight="25.0" prefWidth="130.0" />
+                              <TextField fx:id="txtFiltroTindepYPBA" layoutX="565.0" layoutY="192.0" onKeyReleased="#filtroAvanzadoP" prefHeight="25.0" prefWidth="89.0" />
+                              <TextField fx:id="txtFiltroTCod2PBA" layoutX="651.0" layoutY="251.0" onKeyReleased="#filtroAvanzadoP" prefHeight="25.0" prefWidth="65.0" />
+                              <TextField fx:id="txtFiltroTCapPBA" layoutX="559.0" layoutY="251.0" onKeyReleased="#filtroAvanzadoP" prefHeight="25.0" prefWidth="81.0" />
+                              <TextField fx:id="txtFiltroTgnpPBA" layoutX="32.0" layoutY="251.0" onKeyReleased="#filtroAvanzadoP" prefHeight="25.0" prefWidth="56.0" />
+                              <TextField fx:id="txtFiltroTgnpOldPBA" layoutX="96.0" layoutY="251.0" onKeyReleased="#filtroAvanzadoP" prefHeight="25.0" prefWidth="56.0" />
+                              <Label layoutX="432.0" layoutY="167.0" prefHeight="27.0" prefWidth="125.0" text="Área de superficie">
+                                  <font>
+                                      <Font size="14.0" />
+                                  </font>
+                              </Label>
+                        </children>
+                    </Pane>
+                    
+                 
+                    <Pane fx:id="paneHome" blendMode="SRC_ATOP" layoutX="-3.0" layoutY="7.0" prefHeight="640.0" prefWidth="940.0" style="-fx-background-color: #EBEFEB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                </children>
+         
+            </AnchorPane>
+            <MenuBar fx:id="myMenuBar" prefHeight="31.0" prefWidth="940.0" AnchorPane.bottomAnchor="583.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="0.0">                
+                <menus>
+                    <Menu mnemonicParsing="false" text="Inicio">
+                        <items>
+                            <MenuItem fx:id="menuItemPagPrincipal" mnemonicParsing="false" onAction="#goBackHome" text="Ir al inicio" />
+                        </items>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="Países">
+                        <items>
+                            <MenuItem fx:id="menuItemVerPaises" mnemonicParsing="false" onAction="#goVerPaises" text="Ver países" />
+                            <MenuItem fx:id="menuItemCrearPaís" mnemonicParsing="false" onAction="#doCrearPaís" text="Crear nuevo país" />
+                            <MenuItem fx:id="menuItemModificaryEliminarPaís" mnemonicParsing="false" onAction="#doMEPaís" text="Modificar y eliminar país" />
+                            <MenuItem fx:id="menuItemBusquedaAvanzadaP" mnemonicParsing="false" onAction="#goBAP" text="Búsqueda" />
+                        </items>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="Ciudades">
+                        <items>
+                            <MenuItem fx:id="menuItemVerCiudades" mnemonicParsing="false" onAction="#goVerCiudades" text="Ver ciudades" />
+                            <MenuItem fx:id="menuItemCrearCiudad" mnemonicParsing="false" onAction="#doCrearCiudad" text="Crear nueva ciudad" />
+                            <MenuItem fx:id="menuItemModificaryEliminarCiudad" mnemonicParsing="false" onAction="#doModificaryEliminarCiudad" text="Modificar y eliminar ciudad" />
+                            <MenuItem fx:id="menuItemBusquedaAvanzadaC" mnemonicParsing="false" onAction="#goBAC" text="Búsqueda" />
+                        </items>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="Idiomas">
+                        <items>
+                            <MenuItem fx:id="menuItemVerLenguajes" mnemonicParsing="false" onAction="#goVerLenguajes" text="Ver idiomas" />
+                            <MenuItem fx:id="menuItemCrearLenguaje" mnemonicParsing="false" onAction="#doCrearLenguaje" text="Crear nueva entrada" />
+                            <MenuItem fx:id="menuItemModificaryEliminarLenguaje" mnemonicParsing="false" onAction="#doModificaryEliminarLenguaje" text="Modificar y eliminar idioma" />
+                            <MenuItem fx:id="menuItemBusquedaAvanzadaL" mnemonicParsing="false" onAction="#goBAL" text="Search..." />
+                        </items>
+                    </Menu>
+                </menus>
+            </MenuBar>
+        </AnchorPane>
+    </children>
+</AnchorPane>
